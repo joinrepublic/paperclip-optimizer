@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 3.0.0
+
+* Update gems versions
+* Minor tests fixes
+* Readme update
+
+
 ## 2.0.0
 
 * same as Beta 3

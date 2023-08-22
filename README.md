@@ -2,12 +2,7 @@
 
 ### PaperclipOptimizer is no longer being maintained
 
-As Paperclip has been deprecated, this gem has reached its end-of-life as well.
-
-Maintained forks of both Paperclip as well as PaperclipOptimizer may be found at:
-
-* [kt-paperclip](https://github.com/kreeti/kt-paperclip)
-* [kt-paperclip-optimizer](https://github.com/loco2/kt-paperclip-optimizer)
+So we made a fork of this gem for our needs. It works with [kt-paperclip](https://github.com/kreeti/kt-paperclip).
 
 -------------------------------------------
 
@@ -20,31 +15,13 @@ which supports many external optimization libraries such as [advpng](http://adva
 [jpegtran](http://www.ijg.org/), [optipng](http://optipng.sourceforge.net/), [pngcrush](http://pmt.sourceforge.net/pngcrush/), [pngout](http://www.advsys.net/ken/util/pngout.htm), 
 [pngquant](http://pngquant.org/) and [svgo](https://github.com/svg/svgo).
 
-### What's new
-
-**2015-01-16 2.0.0**
-
-* better configuration: set options [globally, per attachment and per style](#settings)
-
-  Thanks to [danschultzer](https://github.com/danschultzer), [braindeaf](https://github.com/braindeaf) and 
-  [tirdadc](https://github.com/tirdadc) for pull requests, input and reports
-* all available optimization libraries are disabled by default
-
-  Previous versions enabled jpegtran and optipng by default. You will have to 
-  re-enable them manually if you wish to retain that behaviour
-* optimizers which are enabled but missing or broken are ignored by default
-
 Read the [CHANGELOG](CHANGELOG.md) for previous changes.
-
-### Dependencies
-
-PaperclipOptimizer is currently compatible with Paperclip 3.4.2 up to 4.2.x.
 
 ## Installation
 
 Add this line to your application's Gemfile after the Paperclip gem:
 
-    gem 'paperclip-optimizer'
+    gem 'paperclip-optimizer', git: 'git@github.com:joinrepublic/paperclip-optimizer.git'
 
 And then execute:
 
