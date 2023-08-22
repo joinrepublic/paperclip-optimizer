@@ -6,22 +6,24 @@ require 'paperclip-optimizer/version'
 Gem::Specification.new do |spec|
   spec.name          = 'paperclip-optimizer'
   spec.version       = PaperclipOptimizer::VERSION
-  spec.authors       = ['Jan-Christian Föh']
-  spec.email         = ['jan@programmanstalt.de']
+  spec.authors       = ['Andrey Lizunov']
+  spec.email         = ['andrey.lizunov@republic.co']
   spec.description   = 'paperclip-optimizer is a Paperclip processor for optimizing and minifying uploaded images.'
   spec.summary       = 'Minify Paperclip image attachments like JPGs, GIFs or PNGs'
-  spec.homepage      = 'https://github.com/janfoeh/paperclip-optimizer'
+  spec.homepage      = 'https://github.com/joinrepublic/paperclip-optimizer'
   spec.license       = 'MIT'
 
-  spec.add_runtime_dependency 'paperclip', '>= 3.4'
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
+
+  spec.add_runtime_dependency 'kt-paperclip', '>= 6.4'
   spec.add_runtime_dependency 'image_optim', '~> 0.19'
 
-  spec.add_development_dependency 'bundler', '~> 1.3'
-  spec.add_development_dependency 'rake', '~> 10.1'
-  spec.add_development_dependency 'rspec', '~> 2.13'
-  spec.add_development_dependency 'rails', '>= 3.2.20', '<= 4.2.0'
-  spec.add_development_dependency 'sqlite3', '~> 1.3.10'
-  spec.add_development_dependency 'rubocop', '~> 0.26.1'
+  spec.add_development_dependency 'bundler', '~> 2.2.0'
+  spec.add_development_dependency 'rake', '~> 13.0.0'
+  spec.add_development_dependency 'rspec', '~> 3.12'
+  spec.add_development_dependency 'rails', '>= 3.2.20'
+  spec.add_development_dependency 'sqlite3', '~> 1.4.2'
+  spec.add_development_dependency 'rubocop', '>= 1.54.0'
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
